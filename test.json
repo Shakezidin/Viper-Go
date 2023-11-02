@@ -6,5 +6,6 @@
         "DATABASE":"sample",
         "PORT":"5432",
         "SSLMODE":"disable"
+
     }
 }

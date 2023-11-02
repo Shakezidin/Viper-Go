@@ -10,14 +10,14 @@ func Loadenv() (config.Config, error) {
 
 	var config config.Config
 
-	//viper Configuration
+	// Viper Configuration
 	vp.AddConfigPath(".")
 	vp.SetConfigName("test")
 	vp.SetConfigType("json")
 	if err := vp.ReadInConfig(); err != nil {
 		return config, err
 	}
-	if err := viper.Unmarshal(&config); err != nil {
+	if err := vp.Unmarshal(&config); err != nil {
 		return config, err
 	}
 

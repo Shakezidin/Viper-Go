@@ -6,3 +6,9 @@ type User struct {
 	Password string `json:"password"`
 	Phone    int    `json:"phone"`
 }
+
+//Login Model for users
+type Login struct {
+	Email string `json:"email" validate:"required"`
+	Password string `json:"password" validate:"required"`
+}

@@ -12,6 +12,7 @@ import (
 var DB *gorm.DB
 
 func DatabaseConnection(config config.Config) *gorm.DB {
+	fmt.Println(config)
 	host := config.Db.Host
 	user := config.Db.User
 	password := config.Db.Password
