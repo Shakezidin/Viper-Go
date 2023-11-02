@@ -1,10 +1,16 @@
-// main.go
 package main
 
 import (
-	"github.com/Shakezidin/Viper-go/initializer" // Update the import path with your actual username or repository name
+	"fmt"
+
+	"github.com/Shakezidin/Viper-go/initializer"
 )
 
 func main() {
-	initializer.Loadenv()
+	config, err := initializer.Loadenv()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	initializer.DatabaseConnection(config)
 }

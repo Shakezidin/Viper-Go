@@ -1,3 +1,10 @@
 {
-    "MESSAGE": "this message is from json file with viper, used instead of env file"
+    "db":{
+        "HOST":"localhost",
+        "USER":"postgres",
+        "PASSWORD":"12345678",
+        "DATABASE":"sample",
+        "PORT":"5432",
+        "SSLMODE":"disable"
+    }
 }
